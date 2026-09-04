@@ -12,12 +12,33 @@ Each step documents the **System Hacking** methodology, tools, commands, finding
 
 ---
 
-## 1-Reconnaissance 
+## Enviroment
 
 Before starting the attack, we need to prepare our lab environment and identify the target machine.  
 - First, we will use a Kali Linux VM as our attacking machine.  
-- Second, power on the installed Kioptrix VM.  
-- Both machines should be connected to the same virtual network so that they can communicate with each other.
+- Second, power on the installed Kioptrix (.ova) VM.  
+- Both machines should be connected to the same virtual network (NAT is good) so that they can communicate with each other.
 
   
+  ---
+
+  ## 1-Reconnaissance
+
+  - Check my Kali IP address (192.168.38.130). Both machines should be on the same network range.
+ 
+    ``bash
+    ip a
+    ```
+
+    <img width="1298" height="395" alt="image" src="https://github.com/user-attachments/assets/1253154a-a9c7-4c5e-a34c-434f113878dd" />
+
+- We can now try Nmap but, I will go with netdiscover as both are on the same network.
+
+  ```bash
+  netdiscover -r 192.168.38.0/24
+  ```
+
+<img width="965" height="595" alt="image" src="https://github.com/user-attachments/assets/48bb0305-dd96-4b7a-86dd-61287653267f" />
+
+Now that we have verified the network configuration, the vulnerable machine's IP address is (192.168.38.137).
   
