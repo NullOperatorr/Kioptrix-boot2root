@@ -14,7 +14,10 @@ Each step documents the **System Hacking** methodology, tools, commands, finding
 
 ## 1-Reconnaissance 
 
-- First, we will use a Kali VM for attacking.
-- Second, power-on the installed Kioptrix VM.
+Before starting the attack, we need to prepare our lab environment and identify the target machine.  
+- First, we will use a Kali Linux VM as our attacking machine.  
+- Second, power on the installed Kioptrix VM.  
+- Both machines should be connected to the same virtual network so that they can communicate with each other.
 
+  
   
