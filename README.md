@@ -26,7 +26,7 @@ Before starting the attack, we need to prepare our lab environment and identify 
 
   - Check my Kali IP address (192.168.38.130). Both machines should be on the same network range.
  
-    ``bash
+    ```bash  
     ip a
     ```
     
