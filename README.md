@@ -105,7 +105,7 @@ searchsploit samba 2.2.1a
 ## #Vulnerability Analysis
 
 Buffer overflow in the call_trans2open function in trans2.c for Samba 2.2.x before 2.2.8a, 2.0.10 and earlier 2.0.x versions, and Samba-TNG before 0.3.2, allows remote attackers to execute arbitrary code.  
-CVE-2003-0201  
+**CVE-2003-0201**  
 CVSS v3 Score 9.8 Critical   
 https://www.rapid7.com/db/modules/exploit/linux/samba/trans2open/
 
