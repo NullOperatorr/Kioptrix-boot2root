@@ -100,6 +100,29 @@ searchsploit samba 2.2.1a
 
 **Note:** we used the (set payload generic/shell_reverse_tcp) payload because it allows the target machine to establish a reverse TCP connection back to our Kali.
 
+---
+
+## Mitigations
+
+
+- Keep Samba and other services updated and patched to prevent exploitation of known vulnerabilities.
+- Disable unnecessary services and open ports to reduce the attack surface.
+- Properly configure Samba and restrict access to trusted hosts and networks.
+- Use a firewall to limit access to sensitive services.
+- Regularly perform vulnerability scanning and security assessments to identify outdated or vulnerable services.
+- Apply the principle of least privilege to limit the impact of a successful compromise.
+
+  ---
+
+  
+## Lessons Learned
+
+We started by enumerating the Samba service, as it is a common attack surface and can often be misconfigured or vulnerable. We planned to go through the other open ports one by one, but after identifying and exploiting the Samba vulnerability, we successfully gained root access to the machine.
+
+-  Proper reconnaissance and enumeration are key to identifying potential attack surfaces.
+-  Identifying service versions can help us discover known vulnerabilities.
+-  Prioritizing commonly vulnerable services can lead to faster results.
+
 
 
 
