@@ -35,10 +35,12 @@ Before starting the attack, we need to prepare our lab environment and identify 
 
 - We can now try Nmap but, I will go with netdiscover as both are on the same network.
 
- 
+  ```bash
+ sudo netdiscover -r 192.168.38.0/24
+  ```
 
 
-<img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/48bb0305-dd96-4b7a-86dd-61287653267f" />
+<img width="900" height="600" alt="image" src="https://github.com/user-attachments/assets/48bb0305-dd96-4b7a-86dd-61287653267f" />
 
 Now that we have verified the network configuration, the vulnerable machine's IP address is (192.168.38.137).
 
