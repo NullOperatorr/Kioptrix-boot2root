@@ -98,7 +98,7 @@ searchsploit samba 2.2.1a
 <img width="1006" height="707" alt="image" src="https://github.com/user-attachments/assets/ecc6db77-7f07-4857-9814-d0bb79f0dbde" />
 <img width="911" height="307" alt="image" src="https://github.com/user-attachments/assets/38ddd048-d29f-4375-a263-3be5c624be94" />
 
-**Note:** 
+**Note:** we used the (set payload generic/shell_reverse_tcp) payload because it allows the target machine to establish a reverse TCP connection back to our Kali.
 
 
 
