@@ -50,10 +50,9 @@ Now that we have verified the network configuration, the vulnerable machine's IP
 
 - At this step, we will use the popular tool Nmap with the following options:
 
-  ```bash
-  sudo nmap -sV -sS -sC -Pn -p- -T4 192.168.38.137
-
-
+   ```bash  
+   sudo nmap -sV -sS -sC -Pn -p- -T4 192.168.38.137
+    ```
 
 <img width="1008" height="770" alt="image" src="https://github.com/user-attachments/assets/003b9f37-7d28-4e52-8a1b-de0811663909" />  
 
