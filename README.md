@@ -36,10 +36,28 @@ Before starting the attack, we need to prepare our lab environment and identify 
 - We can now try Nmap but, I will go with netdiscover as both are on the same network.
 
   ```bash
-  netdiscover -r 192.168.38.0/24
+ sudo netdiscover -r 192.168.38.0/24
   ```
 
 <img width="800" height="600" alt="image" src="https://github.com/user-attachments/assets/48bb0305-dd96-4b7a-86dd-61287653267f" />
 
 Now that we have verified the network configuration, the vulnerable machine's IP address is (192.168.38.137).
+
+---
+
+## 2-Scanning & Enumeration
+
+- At this step, we will use the popular tool Nmap with the following options:
+
+  ```bash
+  sudo nmap -sV -sS -sC -Pn -p- -T4 192.168.38.137
+```
+
+<img width="1008" height="770" alt="image" src="https://github.com/user-attachments/assets/003b9f37-7d28-4e52-8a1b-de0811663909" />  
+
+- We identified the following open ports: **22, 80, 111, 139, and 443**. We can now begin our attack methodology by identifying the services and their versions and checking for any known exploit. Since **SMB (port 139)** and **HTTP/HTTPS (ports 80 and 443)** are common attack surfaces, we will focus our initial enumeration on these services.
+
+
+
+
   
